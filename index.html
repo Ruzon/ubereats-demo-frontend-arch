@@ -13,60 +13,74 @@
 <body>
   <div class="container">
     <header class="header-block">
-      <div class="col-xs-5 col-md-2">
-        <img class="logo" src="img/icons/logo.svg" />
-      </div>
-      <div class="col-md-5">
-        <div class="header-block__order-row">
-          <input class="when-box" type="text" placeholder="when">
-          <div class="address-box-name">To</div>
-          <input class="address-box" type="text" placeholder="address">
+      <img class="header-block__logo" src="img/icons/logo.svg" />
+      <div class="header-block__food-order-row">
+        <input class="header-block__when-input" type="text" placeholder="when">
+        <div class="header-block__address-input-label">
+          <span>
+            To
+          </span>
         </div>
-      </div>
-      <div class="col-xs-7 col-md-4">
-        <div class="auth-buttons">
-          <div class="signin-button">Sign In</div>
-          <div class="register-button">Register</div>
-          <img class="basket-icon" src="img/icons/basket.png">
+        <div class="header-block__address-container">
+          <img class="header-block__location-img" src="img/icons/location-1.svg">
+          <input class="header-block__address-input" type="text" placeholder="address">
         </div>
+
+      </div>
+      <div class="auth-buttons">
+        <div class="signin-button">
+          <span>
+            Sign In
+          </span>
+        </div>
+        <div class="register-button">
+          <span>
+            Register
+          </span>
+        </div>
+        <img class="basket-icon" src="img/icons/basket.png">
       </div>
     </header>
 
-    <main>
+    <main class="main-block">
 
-      <input class="search-form" type="text" placeholder="Search for restaurant or cuisine">
+      <div class="search-block">
+        <img src="img/icons/search.svg">
+        <input class="search-input" type="text" placeholder="Search for restaurant or cuisine">
+      </div>
+      <div class="separator-line separator-line_gray"></div>
 
-      <div class="main__order-row">
+      <div class="main-block__food-order-row">
         <div class="col-xs-3">
-          <div class="when-box-name">When</div>
+          <div class="main-block__when-input-label">When</div>
         </div>
         <div class="col-xs-9">
-          <div class="address-box-name">To</div>
+          <div class="main-block__address-input-label">To</div>
         </div>
-      </div>
-      <div class="main__order-row">
         <div class="col-xs-3">
-          <input class="when-box" type="text" placeholder="when">
+          <input class="main-block__when-input" type="text" placeholder="when">
         </div>
         <div class="col-xs-9">
-          <input class="address-box" type="text" placeholder="address">
+          <input class="main-block__address-input" type="text" placeholder="address">
         </div>
       </div>
 
-      <p>Moscow restaurants</p>
+      <div class="title-one common-padding">
+        <p>Moscow restaurants</p>
+      </div>
 
-      <div class="product-row">
+      <div class="main-block__product-row">
         <div class="col-xs-12 col-md-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <img class="image" src="img/products/1-3.png" />
         </div>
         <div class="col-xs-12 col-md-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
         </div>
         <div class="col-xs-12 col-md-4">
-          <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <img class="image" src="img/products/photo-3.png" />
         </div>
         <div class="col-xs-12 col-md-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
@@ -107,7 +121,7 @@
           <span>Google Play</span>
         </div>
       </div>
-      <div class="separator-line"></div>
+      <div class="separator-line separator-line_white"></div>
       <div class="global-footer__documents">
         <span class="col-xs-12 col-md-4">2017 Uber Technologies</span>
         <span class="col-xs-12 col-md-4">Privacy</span>

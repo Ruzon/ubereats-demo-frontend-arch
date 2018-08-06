@@ -12,22 +12,11 @@ body {
   background-color: #F2F2F2;
 }
 
-.header-block {
-  height: 72px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  /* margin-left: -8px;
-  margin-right: -8px; */
-}
+/* common styles  */
 
-.auth-buttons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+input[type="text"],
+textarea {
+  background-color: transparent;
 }
 
 .container {
@@ -39,47 +28,165 @@ body {
 
 .image {
   width: 100%;
-  max-width: 100%;
+  height: 250px;
 }
 
-.logo {
-  width: 100%;
-  /* padding-left: 8px; */
-  vertical-align: middle;
+.separator-line {
+  height: 1px;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
-.header-block__order-row {
-  display: none;
+.title-one {
+  font-size: 22px;
+  line-height: 34px;
 }
 
-.main__order-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+.common-padding {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.when-box,
-.address-box {
-  height: 40px;
-  border: 1px solid #E0E0E0;
+.separator-line_white {
+  background: #FFFFFF;
+}
+
+.separator-line_gray {
+  background: #757575;
+}
+
+.home-button {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  width: 64px;
+  height: 64px;
   border-radius: 2px;
+  background: #59BD5A;
+}
+
+/* common styles  @media */
+
+@media (min-width: 768px) {
+  .image {
+    height: 256px;
+  }
+  .home-button {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* header-block */
+
+.header-block {
+  height: 72px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.signin-button,
+.register-button {
+  flex-basis: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-button {
+  margin-right: 12px;
+}
+
+.register-button {
+  background-color: #262626;
+  color: white;
+}
+
+.header-block__logo {
+  flex-basis: 40%;
   width: 100%;
+}
+
+.header-block__food-order-row {
+  display: none;
 }
 
 .basket-icon {
   display: none;
 }
 
+/* header-blck and main-block common styles */
+
+.header-block__when-input,
+.header-block__address-container,
+.main-block__when-input,
+.main-block__address-input,
+.signin-button,
+.register-button {
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* header-block @media */
+
 @media (min-width: 768px) {
-  .header-block__order-row {
+  .header-block__logo {
+    flex-basis: 17%;
+  }
+  .header-block__food-order-row {
+    display: flex;
+    flex-basis: 41.6665%;
+    padding-left: 10px;
+  }
+  .auth-buttons {
+    flex-basis: 33.333%;
+  }
+  .signin-button,
+  .register-button {
+    flex-basis: 80px;
+    width: 80px;
+    margin-right: 16px;
+  }
+  .header-block__when-input,
+  .header-block__address-input {
+    display: initial;
+    min-width: 10%;
+  }
+  .header-block__when-input {
+    flex-basis: 15%;
+  }
+  .header-block__address-container {
+    flex-basis: 60%;
     display: flex;
   }
-  .main__order-row {
-    display: none;
+  .header-block__address-input {
+    border-color: transparent;
   }
-  .when-box,
-  .address-box {
-    display: initial;
+  .header-block__location-img {
+    margin: 0px 12px;
+  }
+  .header-block__address-input-label {
+    flex-basis: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .basket-icon {
     display: initial;
@@ -87,10 +194,103 @@ body {
   }
 }
 
-.product-row {
+/* main-block */
+
+.main-block__food-order-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 125px;
+  /* align-content: space-between; */
+}
+
+.main-block__when-input,
+.main-block__address-input {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.main-block__product-row {
   display: flex;
   flex-wrap: wrap;
 }
+
+.search-block {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 79px;
+}
+
+.search-input {
+  /* refactor */
+  width: 100%;
+  padding-left: 8px;
+  border-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .main-block__food-order-row {
+    display: none;
+  }
+}
+
+/* global-footer */
+
+.global-footer {
+  height: 862px;
+  background: #262626;
+  color: white;
+}
+
+.global-footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.global-footer__apps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.global-footer__documents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.global-footer__logo-row {
+  height: 116px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 95%;
+}
+
+/* footer @media */
+
+@media (min-width: 768px) {
+  .global-footer {
+    height: 552px;
+  }
+  .footer-logo {
+    width: 75%;
+  }
+}
+
+/* @media 1124 */
+
+@media (min-width: px) {
+  .footer-logo {
+    width: 83%;
+  }
+  .auth-buttons {
+    flex-basis: 25%;
+  }
+}
+
+/* cols */
 
 .col-xs-1,
 .col-xs-2,
@@ -157,9 +357,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  body {
-    /* color: red; */
-  }
   .col-md-1,
   .col-md-2,
   .col-md-3,
@@ -209,79 +406,5 @@ body {
   }
   .col-md-12 {
     flex-basis: 100%;
-  }
-}
-
-.global-footer {
-  height: 862px;
-  background: #262626;
-  color: white;
-}
-
-.separator-line {
-  height: 1px;
-  background: #FFFFFF;
-  mix-blend-mode: normal;
-  opacity: 0.4;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
-.global-footer__menu {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.global-footer__apps {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.global-footer__documents {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.global-footer__logo-row {
-  height: 116px;
-  display: flex;
-  align-items: center;
-}
-
-.footer-logo {
-  width: 95%;
-}
-
-@media (min-width: 768px) {
-  .global-footer {
-    height: 552px;
-  }
-  .footer-logo {
-    width: 75%;
-  }
-}
-
-@media (min-width: 1124px) {
-  .footer-logo {
-    width: 83%;
-  }
-}
-
-.home-button {
-  position: fixed;
-  bottom: 24px;
-  right: 16px;
-  width: 64px;
-  height: 64px;
-  border-radius: 2px;
-  background: #59BD5A;
-}
-
-/* common and other stuff */
-
-@media (min-width: 768px) {
-  .home-button {
-    width: 80px;
-    height: 80px;
   }
 }
