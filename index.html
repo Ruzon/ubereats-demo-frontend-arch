@@ -142,16 +142,17 @@
       <div class="global-footer__menu">
         <div class="col-xs-12 col-md-4">
           <form>
-            <div class="select-box">
+            <!-- refactor select: icon inside select text-->
+            <div class="global-footer__select-box">
               <label>
-                <img src="img/icons/world.svg">
-                <select name="localization">
+                <img class="global-footer__world-icon" src=" img/icons/world.svg ">
+                <select class="global-footer__select" name="localization">
                   <option value="RU">Russian</option>
                   <option value="DU">Dutch</option>
                   <option value="EN" selected>ENGLISH</option>
                   <option value="GE" disabled>German</option>
                 </select>
-                <img src="img/icons/if_icon-ios7-arrow-back_211686.svg">
+                <img class="global-footer__select-arrow-icon" src=" img/icons/if_icon-ios7-arrow-back_211686.svg ">
               </label>
             </div>
           </form>
@@ -165,15 +166,26 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <div>About UberEats</div>
-          <div>Become a delivery partner</div>
-          <div>See all cities</div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">About UberEats</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Become a delivery partner</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">See all cities</a>
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <div>Pricing</div>
-          <div>Help</div>
-          <div>FAQs</div>
-
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Pricing</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Help</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">FAQs</a>
+          </div>
         </div>
       </div>
       <div class="separator-line separator-line_white"></div>
@@ -183,13 +195,25 @@
       </div>
       <div class="separator-line separator-line_white"></div>
       <div class="global-footer__documents">
-        <span class="col-xs-12 col-md-4">2017 Uber Technologies</span>
-        <span class="col-xs-12 col-md-4">Privacy</span>
-        <span class="col-xs-12 col-md-4">Terms</span>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            2017 Uber Technologies Inc.
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Privacy</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Terms</a>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="home-button">
-      <!-- <img class="home-button__arrow" src="/img/icons/arrow.svg"> -->
+      <img class="home-button__arrow" src="img/icons/arrow.svg">
     </div>
   </div>
 </body>
