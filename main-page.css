@@ -18,7 +18,6 @@
   flex-wrap: wrap;
   align-content: center;
   height: 125px;
-  /* align-content: space-between; */
 }
 
 .main-block__when-input,

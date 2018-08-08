@@ -1,3 +1,7 @@
+/* to fix: системность оступов */
+
+/* common styles */
+
 html {
   box-sizing: border-box;
 }
@@ -12,8 +16,6 @@ body {
   background-color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
 }
-
-/* common styles  */
 
 input[type="text"],
 textarea {
@@ -31,16 +33,17 @@ select {
 }
 
 .container {
+  /* переписал отступы 8px 
+  flexboxgrid2 контейнера 
+  - нормальное решение? */
   position: relative;
-  max-width: 976px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .image {
   width: 100%;
   height: 250px;
-  /* max-width: 600px; */
 }
 
 .separator-line {
@@ -93,13 +96,15 @@ select {
   right: 16px;
   width: 64px;
   height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 2px;
   background: #59BD5A;
 }
 
 .home-button__arrow {
-  height: 30%;
-  margin: 0 auto;
+  height: 40%;
 }
 
 /* common styles  @media */
@@ -251,6 +256,9 @@ select {
   .header-block__when-input {
     max-width: 65px;
   }
+  .auth-buttons {
+    flex-basis: 25%;
+  }
 }
 
 /* global-footer */
@@ -312,7 +320,7 @@ select {
 .global-footer__select {
   display: inline-block;
   padding-left: 16px;
-  /* padding-bottom: 20px; ? не отрабатывает*/
+  /* padding-bottom: 20px; ? не отрабатывает */
 }
 
 .global-footer__select-arrow-icon {
@@ -368,13 +376,8 @@ select {
   }
 }
 
-/* @media 1124 */
-
-@media (min-width: px) {
+@media (min-width: 1124px) {
   .footer-logo {
     width: 83%;
-  }
-  .auth-buttons {
-    flex-basis: 25%;
   }
 }
