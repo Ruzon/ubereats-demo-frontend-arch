@@ -6,27 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Uber Eats</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 
 <body>
   <div class="container">
     <header class="header-block">
       <img class="header-block__logo" src="img/icons/logo.svg" />
-      <div class="header-block__food-order-row">
-        <input class="header-block__when-input" type="text" placeholder="when">
+      <form class="header-block__food-order-row" action="/order" method="post">
+        <input class="header-block__when-input" name="when" type="text" placeholder="when">
         <div class="header-block__address-input-label">
           <span>
             To
           </span>
         </div>
-        <div class="header-block__address-container">
+        <label class="header-block__address-container">
           <img class="header-block__location-img" src="img/icons/location-1.svg">
-          <input class="header-block__address-input" type="text" placeholder="address">
-        </div>
-
-      </div>
+          <input class="header-block__address-input" name="address" type="text" placeholder="address">
+        </label>
+      </form>
       <div class="auth-buttons">
         <div class="signin-button">
           <span>
@@ -55,7 +55,7 @@
           <div class="main-block__when-input-label">When</div>
         </div>
         <div class="col-xs-9">
-          <div class="main-block__address-input-label">To</div>
+          <div class="main-block__address-input-label">to</div>
         </div>
         <div class="col-xs-3">
           <input class="main-block__when-input" type="text" placeholder="when">
@@ -65,25 +65,70 @@
         </div>
       </div>
 
-      <div class="title-one common-padding">
-        <p>Moscow restaurants</p>
+      <div class="main-block__header-box common-padding">
+        <div class="main-block__header-name font-one">Moscow restaurants</div>
       </div>
 
       <div class="main-block__product-row">
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <img class="image" src="img/products/1-3.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <img class="image" src="img/products/photo-3.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -93,12 +138,31 @@
           <img class="footer-logo" src="img/icons/white-logo.svg">
         </div>
       </div>
-      <div class="separator-line"></div>
+      <div class="separator-line separator-line_white"></div>
       <div class="global-footer__menu">
         <div class="col-xs-12 col-md-4">
-          <div>English</div>
-          <div>#UberEats </div>
-          <div>Social Media</div>
+          <form>
+            <div class="select-box">
+              <label>
+                <img src="img/icons/world.svg">
+                <select name="localization">
+                  <option value="RU">Russian</option>
+                  <option value="DU">Dutch</option>
+                  <option value="EN" selected>ENGLISH</option>
+                  <option value="GE" disabled>German</option>
+                </select>
+                <img src="img/icons/if_icon-ios7-arrow-back_211686.svg">
+              </label>
+            </div>
+          </form>
+
+          <div>
+            <span class="ubereats-hashtag">#</span>UberEats </div>
+          <div class="social-media">
+            <img class="facebook-icon" src="img/icons/facebook.svg">
+            <img class="twitter-icon" src="img/icons/twitter.svg">
+            <img class="instagram-icon" src="img/icons/instagram-2.svg">
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
           <div>About UberEats</div>
@@ -112,14 +176,10 @@
 
         </div>
       </div>
-      <div class="separator-line"></div>
+      <div class="separator-line separator-line_white"></div>
       <div class="global-footer__apps">
-        <div class="col-xs-6">
-          <span>App Store</span>
-        </div>
-        <div class="col-xs-6">
-          <span>Google Play</span>
-        </div>
+        <img class="appstore-icon" src="img/icons/appstore.png" alt="appstore icon">
+        <img class="google-play-icon" src="img/icons/gooogle_play.png" alt="google play icon">
       </div>
       <div class="separator-line separator-line_white"></div>
       <div class="global-footer__documents">
@@ -129,7 +189,7 @@
       </div>
     </footer>
     <div class="home-button">
-      <!-- <img src="/img/icons/arrow.svg"> -->
+      <!-- <img class="home-button__arrow" src="/img/icons/arrow.svg"> -->
     </div>
   </div>
 </body>
