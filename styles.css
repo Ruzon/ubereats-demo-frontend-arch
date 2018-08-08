@@ -1,6 +1,6 @@
 /* to fix: системность оступов */
 
-/* common styles */
+/* common styles and whats next*/
 
 html {
   box-sizing: border-box;
@@ -11,6 +11,8 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+
 
 body {
   background-color: #F2F2F2;
