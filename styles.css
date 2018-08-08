@@ -171,12 +171,8 @@ select {
   display: none;
 }
 
-/* header-block and main-block common styles */
-
 .header-block__when-input,
 .header-block__address-container,
-.main-block__when-input,
-.main-block__address-input,
 .signin-button,
 .register-button {
   height: 40px;
@@ -254,67 +250,6 @@ select {
   }
   .header-block__when-input {
     max-width: 65px;
-  }
-}
-
-/* main-block */
-
-.search-block {
-  display: flex;
-  padding: 20px 8px 0px;
-  height: 79px;
-}
-
-.search-input {
-  /* refactor ? */
-  width: 100%;
-  padding-left: 8px;
-  border-color: transparent;
-}
-
-.main-block__food-order-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  height: 125px;
-  /* align-content: space-between; */
-}
-
-.main-block__when-input,
-.main-block__address-input {
-  width: 100%;
-  margin-top: 8px;
-}
-
-.main-block__header-box {
-  height: 60px;
-}
-
-.main-block__header-name {
-  padding-top: 15px;
-}
-
-.main-block__product-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.main-block__product-description {
-  padding-top: 9px;
-  padding-bottom: 30px;
-}
-
-/* main-block @media */
-
-@media (min-width: 768px) {
-  .main-block__food-order-row {
-    display: none;
-  }
-  .main-block__header-box {
-    height: 106px;
-  }
-  .main-block__header-name {
-    padding-top: 51px;
   }
 }
 

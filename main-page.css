@@ -1,0 +1,64 @@
+/* main-block */
+
+.search-block {
+  display: flex;
+  padding: 20px 8px 0px;
+  height: 79px;
+}
+
+.search-input {
+  /* refactor ? */
+  width: 100%;
+  padding-left: 8px;
+  border-color: transparent;
+}
+
+.main-block__food-order-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 125px;
+  /* align-content: space-between; */
+}
+
+.main-block__when-input,
+.main-block__address-input {
+  width: 100%;
+  margin-top: 8px;
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.main-block__header-box {
+  height: 60px;
+}
+
+.main-block__header-name {
+  padding-top: 15px;
+}
+
+.main-block__product-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-block__product-description {
+  padding-top: 9px;
+  padding-bottom: 30px;
+}
+
+/* main-block @media */
+
+@media (min-width: 768px) {
+  .main-block__food-order-row {
+    display: none;
+  }
+  .main-block__header-box {
+    height: 106px;
+  }
+  .main-block__header-name {
+    padding-top: 51px;
+  }
+}
