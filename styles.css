@@ -74,6 +74,7 @@ select {
 .font-four {
   font-size: 13px;
   line-height: 21px;
+  color: red;
 }
 
 /* refactor? */
