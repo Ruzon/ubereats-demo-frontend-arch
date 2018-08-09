@@ -96,8 +96,8 @@ select {
   position: absolute;
   bottom: 24px;
   right: 16px;
-  width: 64px;
-  height: 64px;
+  width: 65px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
