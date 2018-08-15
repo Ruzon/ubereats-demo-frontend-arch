@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Uber Eats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main-page.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header-block">
+      <img class="header-block__logo" src="img/icons/logo.svg" />
+      <form class="header-block__food-order-row" action="/order" method="post">
+        <input class="header-block__when-input" name="when" type="text" placeholder="when">
+        <div class="header-block__address-input-label">
+          <span>
+            To
+          </span>
+        </div>
+        <label class="header-block__address-container">
+          <img class="header-block__location-img" src="img/icons/location-1.svg">
+          <input class="header-block__address-input" name="address" type="text" placeholder="address">
+        </label>
+      </form>
+      <div class="auth-buttons">
+        <div class="signin-button">
+          <span>
+            Sign In
+          </span>
+        </div>
+        <div class="register-button">
+          <span>
+            Register
+          </span>
+        </div>
+        <img class="basket-icon" src="img/icons/basket.png">
+      </div>
+    </header>
+
+    <main class="main-block">
+
+      <div class="search-block">
+        <img src="img/icons/search.svg">
+        <input class="search-input" type="text" placeholder="Search for restaurant or cuisine">
+      </div>
+      <div class="separator-line separator-line_gray"></div>
+
+      <div class="main-block__food-order-row">
+        <div class="col-xs-3">
+          <div class="main-block__when-input-label">When</div>
+        </div>
+        <div class="col-xs-9">
+          <div class="main-block__address-input-label">to</div>
+        </div>
+        <div class="col-xs-3">
+          <input class="main-block__when-input" type="text" placeholder="when">
+        </div>
+        <div class="col-xs-9">
+          <input class="main-block__address-input" type="text" placeholder="address">
+        </div>
+      </div>
+
+      <div class="main-block__header-box common-padding">
+        <div class="main-block__header-name font-one">Moscow restaurants</div>
+      </div>
+
+      <div class="main-block__product-row">
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <img class="image" src="img/products/1-3.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <img class="image" src="img/products/photo-3.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <img class="image" src="img/products/95b745f6ce6a45903c3ed254afd72e46-w550-27.png" />
+          <div class="main-block__product-description">
+            <div class="font-two">Мак - печенюга</div>
+            <div class="font-three">
+              &#8381;&#8381; - Бургеры
+            </div>
+            <div class="font-four">
+              27 - 1000 мин
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="global-footer">
+      <div class="global-footer__logo-row">
+        <div class="col-xs-8 col-md-4 col-lg-3">
+          <img class="footer-logo" src="img/icons/white-logo.svg">
+        </div>
+      </div>
+      <div class="separator-line separator-line_white"></div>
+      <div class="global-footer__menu">
+        <div class="col-xs-12 col-md-4">
+          <form>
+            <!-- refactor select: icon inside select text-->
+            <div class="global-footer__select-box">
+              <label>
+                <img class="global-footer__world-icon" src=" img/icons/world.svg ">
+                <select class="global-footer__select" name="localization">
+                  <option value="RU">Russian</option>
+                  <option value="DU">Dutch</option>
+                  <option value="EN" selected>ENGLISH</option>
+                  <option value="GE" disabled>German</option>
+                </select>
+                <img class="global-footer__select-arrow-icon" src=" img/icons/if_icon-ios7-arrow-back_211686.svg ">
+              </label>
+            </div>
+          </form>
+
+          <div>
+            <span class="ubereats-hashtag">#</span>UberEats </div>
+          <div class="social-media">
+            <img class="facebook-icon" src="img/icons/facebook.svg">
+            <img class="twitter-icon" src="img/icons/twitter.svg">
+            <img class="instagram-icon" src="img/icons/instagram-2.svg">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">About UberEats</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Become a delivery partner</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">See all cities</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Pricing</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Help</a>
+          </div>
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">FAQs</a>
+          </div>
+        </div>
+      </div>
+      <div class="separator-line separator-line_white"></div>
+      <div class="global-footer__apps">
+        <img class="appstore-icon" src="img/icons/appstore.png" alt="appstore icon">
+        <img class="google-play-icon" src="img/icons/gooogle_play.png" alt="google play icon">
+      </div>
+      <div class="separator-line separator-line_white"></div>
+      <div class="global-footer__documents">
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            2017 Uber Technologies Inc.
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Privacy</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="global-footer__link-box">
+            <a href="/new" target="_blank">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="home-button">
+      <img class="home-button__arrow" src="img/icons/arrow.svg">
+    </div>
+  </div>
+</body>
+
+</html>
