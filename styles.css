@@ -304,6 +304,7 @@ select {
   font-size: 11px;
   line-height: 13px;
   padding: 32px 0px;
+  background: transparent;
 }
 
 .global-footer__select-box {
